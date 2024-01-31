@@ -23,7 +23,7 @@
             "purchaseurl" => "https://w3school.com"
         ]
     ];
-    function FilterByAuthor($books , $author){
+    $FilterByAuthor = function ($books , $author){
         $filteredbook = [];
         foreach($books as $book) {
             if ($book['author'] == $author){
@@ -31,8 +31,8 @@
             }
         }
         return $filteredbook;
-    }
-    $filteredbook=FilterByAuthor($books,'a')
+    };
+    $filteredbook=$FilterByAuthor($books,'a')
 ?>
 <ul>
     <?php foreach ($filteredbook as $book) {
