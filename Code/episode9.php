@@ -23,16 +23,18 @@
             "purchaseurl" => "https://w3school.com"
         ]
     ];
-    function filter($items , $key , $value){
+    function filter($items ,$fn){
         $filtereditem = [];
         foreach($items as $item) {
-            if ($item[$key] == $value){
+            if ($fn($item)){
                 $filtereditem[] = $item ;
             }
         }
         return $filtereditem;
     }
-    $filteredbook=filter($books,'author','a')
+    $filteredbook = filter($books,function ($book) {
+        return $book['name'] == "web";
+    });
 ?>
 <ul>
     <?php foreach ($filteredbook as $book) {
