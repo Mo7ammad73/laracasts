@@ -1,0 +1,68 @@
+<div class="body" dir="rtl">
+کدهای html نوشته شده در بخش های قبل را از کدهای php جداکرده و در یک فایل جدا با نام مثلا index.view.php ریخته سپس یا دستور  require به فایل اصلی اضافه میکنیم.
+
+کدهای فایل اصلی
+<div dir="ltr">
+
+```php
+<?php
+    $books = [
+        [
+            "name" => "english" ,
+            "author" => "a" ,
+            "purchaseurl" => "https://google.com"
+        ],
+        [
+            "name" => "web" ,
+            "author" => "b" ,
+            "purchaseurl" => "https://bing.com"
+        ],
+        [
+            "name" => "css" ,
+            "author" => "a" ,
+            "purchaseurl" => "https://w3school.com"
+        ]
+    ];
+    function filter($items ,$fn){
+        $filtereditem = [];
+        foreach($items as $item) {
+            if ($fn($item)){
+                $filtereditem[] = $item ;
+            }
+        }
+        return $filtereditem;
+    }
+    $filteredbook = filter($books,function ($book) {
+        return $book['name'] == "web";
+    });
+    require "index.view.php" ;
+?>
+
+```
+<div dir="rtl">
+کدهای نوشته شده در فایل index.view.php
+
+<div dir="ltr">
+
+```php
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Episode9</title>
+    </head>
+    <body>
+
+        <ul>
+            <?php foreach ($filteredbook as $book) {
+                echo "<li>" . $book['name'] . "</li>";
+            }
+            ?>
+
+        </ul>
+
+    </body>
+</html>
+
+```
