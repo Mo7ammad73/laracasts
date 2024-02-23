@@ -28,5 +28,5 @@ function filter($items ,$fn){
 $filteredbook = filter($books,function ($book) {
     return $book['name'] == "web";
 });
-require "index.view.php";
+require "index.partials.php";
 ?>
