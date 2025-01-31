@@ -6,7 +6,7 @@
 ```php
     name = [
     "key" => "value",
-    "keyn"=> "valuen"
+    "keyn"=> "value n"
 ];
 ```
 <div dir="rtl">
