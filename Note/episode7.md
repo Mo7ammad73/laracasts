@@ -4,10 +4,11 @@
 
 
 ```php
-    name = [
-    "key" => "value",
-    "keyn"=> "value n"
-];
+    name =
+     [
+        "key" => "value",
+        "key n"=> "value n"
+    ];
 ```
 <div dir="rtl">
 
