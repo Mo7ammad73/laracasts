@@ -5,10 +5,12 @@
 <div dir="ltr">
 
 ```php
+
     نام آرایه = [
         "نام کلید" <= "مقدار کلید",
         "نام کلید آخر" <= "مقدار کلید آخر"
     ]
+
 ```
 <div dir="rtl">
 
@@ -17,32 +19,31 @@
 <div dir="ltr">
 
 ```php
-    <?php
-$books = [
+
+<?php
+    $books = 
     [
-        "name" => "english sentence",
-        "author" => "rafiei",
-        "purchaseurl" => "https://google.com"
-    ],
-    [
-        "name" => "web design",
-        "author" => "ahmadi",
-        "purchaseurl" => "https://bing.com"
-    ]
-];
+        [
+            "name" => "english sentence",
+            "author" => "rafiei",
+            "purchaseurl" => "https://google.com"
+        ],
+        [
+            "name" => "web design",
+            "author" => "ahmadi",
+            "purchaseurl" => "https://bing.com"
+        ]
+    ];
 ?>
 
 
 <ul>
 
     <?php foreach($books as $book) : ?>
-
         <li>
-
             <a href="<?= $book['purchaseurl']; ?>">
                 <?= $book['name']; ?>
             </a>
-
         </li>
     <?php endforeach; ?>
 
