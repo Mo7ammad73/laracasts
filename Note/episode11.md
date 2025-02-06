@@ -1,7 +1,7 @@
 <div dir="rtl">
 در فایل index.php یک آرایه تعریف کرده تا محتوای آن را در فایل index.view.php نمایش دهیم
 
-###محتوای فایل index.php
+### محتوای فایل index.php
 
 <div dir="ltr">
 
