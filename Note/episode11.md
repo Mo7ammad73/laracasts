@@ -24,6 +24,7 @@
 <div dir="rtl">
 
 ### محتوای فایل index.view.php 
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -48,3 +49,6 @@
 
 </body>
 </html>
+
+
+```
