@@ -181,8 +181,8 @@
 
 حالا کد بالا را در فایل های about.view.php , contact.view.php کپی میکنیم .
 کد زیر را هم در فایل های index.php , about.php , contact.php  قرار داده فقظ در هر فایل نام فایل مربوظه را مینویسیم.
-bg-gray-900 برای لینکی که فعال هست قرار میدهیم
-text-gray-300 برای لینکی که فعال نیست قرار میدهیم.
+bg-gray-900 text-whiteبرای لینکی که فعال هست قرار میدهیم
+text-gray-300 hover:bg-gray-700 hover:text-white برای لینکی که فعال نیست قرار میدهیم.
 <div dir="ltr">
 
 ```html
