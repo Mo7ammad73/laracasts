@@ -221,9 +221,10 @@ require "index.view.php or about.view.php or contact.view.php";
 ``` php
 
     <?php
-   require_once "(about or contact) .view.php";
+   require_once "(about-or-contact).view.php";
 
 ```
+
 و در نهایت درون فایل های index.view.php-about.view.php و  contact.view.php کد زیر را نوشتیم که فقط برای منوی فعال در هر صفحه همان طور که در بالا گفته شد یک سری تغییرات انجام میدهیم
 ```html
 <a href="/" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white " aria current="page">Home</a>
