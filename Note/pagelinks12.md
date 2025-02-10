@@ -210,19 +210,16 @@ require "index.view.php or about.view.php or contact.view.php";
 
 <div dir="rtl">
 در این بخش ما یک فایل index.php داشتیم که فایل index.view.php داخل پوشه Code که درونش پوشه pagelinks12 و درون این پوشه فایل های ما هست لینک دادیم به صورت
-``` php
 
+```php
     <?php
    require_once "Code/pagelinks12/index.view.php";
 
-```
 بعدش درون هریک از فایل های about.php و contact.php به صورت زیر کد زدیم
 
-``` php
 
     <?php
    require_once "(about-or-contact).view.php";
-
 ```
 
 و در نهایت درون فایل های index.view.php-about.view.php و  contact.view.php کد زیر را نوشتیم که فقط برای منوی فعال در هر صفحه همان طور که در بالا گفته شد یک سری تغییرات انجام میدهیم
