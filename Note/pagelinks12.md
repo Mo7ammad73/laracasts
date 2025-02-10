@@ -210,14 +210,19 @@ require "index.view.php or about.view.php or contact.view.php";
 
 <div dir="rtl">
 در این بخش ما یک فایل index.php داشتیم که فایل index.view.php داخل پوشه Code که درونش پوشه pagelinks12 و درون این پوشه فایل های ما هست لینک دادیم به صورت
+<div dir="ltr">
 
 ```php
     <?php
    require_once "Code/pagelinks12/index.view.php";
+```
+<div dir="rtl">
 
 بعدش درون هریک از فایل های about.php و contact.php به صورت زیر کد زدیم
 
+<div dir="ltr">
 
+```php
     <?php
    require_once "(about-or-contact).view.php";
 ```
