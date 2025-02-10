@@ -207,3 +207,26 @@ function register($user) {
 require "index.view.php or about.view.php or contact.view.php";
 
 ```
+
+<div dir="rtl">
+در این بخش ما یک فایل index.php داشتیم که فایل index.view.php داخل پوشه Code که درونش پوشه pagelinks12 و درون این پوشه فایل های ما هست لینک دادیم به صورت
+``` php
+
+    <?php
+   require_once "Code/pagelinks12/index.view.php";
+
+```
+بعدش درون هریک از فایل های about.php و contact.php به صورت زیر کد زدیم
+
+``` php
+
+    <?php
+   require_once "(about or contact) .view.php";
+
+```
+و در نهایت درون فایل های index.view.php-about.view.php و  contact.view.php کد زیر را نوشتیم که فقط برای منوی فعال در هر صفحه همان طور که در بالا گفته شد یک سری تغییرات انجام میدهیم
+``` html
+<a href="/" class="rounded-md   px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white " aria-current="page">Home</a>
+                            <a href="/Code/pagelinks12/about.php" class="rounded-md text-gray-300 hover:bg-gray-700 hover:text-white  px-3 py-2 text-sm font-medium ">About</a>
+                            <a href="/Code/pagelinks12/contact.php" class="rounded-md px-3 py-2 text-sm font-medium bg-gray-900 text-white">Contact</a>
+```
