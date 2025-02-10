@@ -253,6 +253,6 @@
 
 ```html
 <a href="/" class="rounded-md <?php echo (basename($_SERVER['PHP_SELF'])== "index.php") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ; ?>   px-3 py-2 text-sm font-medium " aria-current="page">Home</a>
-                        <a href="/Code/views/about.php" class="rounded-md <?php echo (basename($_SERVER['PHP_SELF'])== "about.php") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ; ?>   px-3 py-2 text-sm font-medium ">About</a>
-                        <a href="/Code/views/contact.php" class="rounded-md <?php echo (basename($_SERVER['PHP_SELF']) == "contact.php") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ; ?> px-3 py-2 text-sm font-medium ">Contact</a>
+<a href="/Code/views/about.php" class="rounded-md <?php echo (basename($_SERVER['PHP_SELF'])== "about.php") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ; ?>   px-3 py-2 text-sm font-medium ">About</a>
+<a href="/Code/views/contact.php" class="rounded-md <?php echo (basename($_SERVER['PHP_SELF']) == "contact.php") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ; ?> px-3 py-2 text-sm font-medium ">Contact</a>
 ```
