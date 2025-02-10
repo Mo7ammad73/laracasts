@@ -233,3 +233,7 @@ require "index.view.php or about.view.php or contact.view.php";
 <a href="/Code/pagelinks12/about.php" class="rounded-md text-gray-300 hover:bg-gray-700 hover:text-white  px-3 py-2 text-sm font-medium ">About</a>
 <a href="/Code/pagelinks12/contact.php" class="rounded-md px-3 py-2 text-sm font-medium bg-gray-900 text-white">Contact</a>
 ```
+<div dir="rtl">
+
+#### نکته آخر اینکه فایل index.php در ریشه اصلی سایت قرارداشت خارج از پوشه Code
+
