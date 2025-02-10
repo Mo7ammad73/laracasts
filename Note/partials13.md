@@ -256,3 +256,13 @@
 <a href="/Code/views/about.php" class="rounded-md <?php echo (basename($_SERVER['PHP_SELF'])== "about.php") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ; ?>   px-3 py-2 text-sm font-medium ">About</a>
 <a href="/Code/views/contact.php" class="rounded-md <?php echo (basename($_SERVER['PHP_SELF']) == "contact.php") ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ; ?> px-3 py-2 text-sm font-medium ">Contact</a>
 ```
+
+<div dir="rtl">
+
+###  $_SERVER['PHP_SELF']:
+####    این یک متغیر سوپرگلوبال است که نام فایل PHP فعلی (به همراه مسیر نسبت به ریشه سایت) را باز می‌گرداند. مثلاً اگر در صفحه about.php قرار داشته باشی و آدرس صفحه به این شکل باشد:http://example.com/Code/views/about.php
+
+آنگاه $_SERVER['PHP_SELF'] مقدار /Code/views/about.php را برمی‌گرداند.
+
+### basename():
+####   تابع basename() فقط نام فایل را از یک مسیر کامل استخراج می‌کند. اگر به آن مسیر /Code/views/about.php را بدهیم، این تابع تنها about.php را برمی‌گرداند.
