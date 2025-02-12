@@ -168,3 +168,5 @@ function abort($code = 404) {
 routeTocontroller($url,$routes);
 
 ```
+<div dir="rtl">
+تابع routeTocontroller یک مسیر و یک آرایه دریافت میکند اگر مسیر در آرایه موجود بود یک require_once به فایلی با نام آرایه داده شده که کلیدش مسیر داده شده هست.
