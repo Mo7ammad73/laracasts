@@ -1,4 +1,5 @@
 
     <?php
-   require_once "Code/pagelinks12/index.view.php";
-
+        $heading = "Home";
+        require_once "Code/views/partials/function.php";
+        require_once "router.php";
