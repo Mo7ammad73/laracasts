@@ -128,3 +128,25 @@ $obj = new ChildClass();
 $obj->greet(); // خروجی: سلام از کلاس پدر! سلام از کلاس فرزند!
 
 ```
+
+<div dir="rtl">
+
+# کار با پایگاه داده
+
+برای کار با پایگاه داده باید یک نمونه از شی pdo(php data object) تعریف کرد و یک مقدار dsn(data source name) بهش داد سپس بر روی آن شی کار کرد.
+<div dir="ltr">
+
+```php
+$dsn='mysql:host=localhost;port=3306;dbname=mydb1;charset=utf8mb4';
+$pdo = new PDO($dsn, 'root', '');//username and password and dsn
+$statement = $pdo->prepare("select id,title from tb2");//run sql code with prepare
+$statement->execute();//run sql code
+$post = $statement->fetchAll((PDO::FETCH_ASSOC));
+//show_print();
+//show_print($statement->fetchAll(PDO::FETCH_ASSOC));//show extra fields 
+show_print($post);
+foreach ($post as $row) {
+    echo "<li>". $row['title'] ."</li>\n";
+}
+show_print($post);
+```
