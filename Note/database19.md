@@ -76,3 +76,12 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             ];
     $dsn = "mysql:host={$config['host']};dbname={$config['dbname']};port={$config['port']};charset={$config['charset']}";
 ```
+<div dir="rtl">
+در کلاس database به متد سازنده رفته و کد داخلش را تغییر میدهیم .
+<div dir="ltr">
+
+```php
+$this->connection  = new PDO($dsn,"root","",[
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC//تعیین مقدار پیش فرض واکشی داده ها اط پایگاه داده به صورت آرایه انجمنی
+    ]);
+```
