@@ -42,9 +42,11 @@ Array (
 تفاوت PDO::FETCH_ASSOC با PDO::FETCH_BOTH و PDO::FETCH_OBJ:
 <hr>
 PDO::FETCH_ASSOC → فقط آرایه انجمنی برمی‌گرداند (کلیدها برابر با نام ستون‌ها).
+<hr>
 PDO::FETCH_BOTH → هم آرایه انجمنی و هم عددی برمی‌گرداند.
+<hr>
 PDO::FETCH_OBJ → خروجی را به‌صورت یک شیء برمی‌گرداند.
-
+<hr>
 در کلاس database  یک آرایه با نام config تعریف کرده و مقادیر dsn را درون آن قرار میدهیم.
 سپس مقدار dsn را به صورت زیر تغییر میدهیم.
 <div dir="ltr">
