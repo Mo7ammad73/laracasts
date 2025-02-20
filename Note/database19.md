@@ -47,8 +47,19 @@ PDO::FETCH_BOTH → هم آرایه انجمنی و هم عددی برمی‌گ�
 <hr>
 PDO::FETCH_OBJ → خروجی را به‌صورت یک شیء برمی‌گرداند.
 <hr>
-** تغییر مقدار پیش‌فرض: ** 
+ 
+تغییر مقدار پیش‌فرض:  
+<hr>
 اگر بخواهید مقدار پیش‌فرض fetch() را تغییر دهید، می‌توانید هنگام ایجاد PDO، گزینه ATTR_DEFAULT_FETCH_MODE را تنظیم کنید:
+
+<div dir="ltr">
+
+```php
+$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+```
+<div dir="rtl">
+اکنون تمام fetch()ها بدون نیاز به مشخص کردن PDO::FETCH_ASSOC، خروجی را به‌صورت آرایه انجمنی برمی‌گردانند.
+<hr>
 در کلاس database  یک آرایه با نام config تعریف کرده و مقادیر dsn را درون آن قرار میدهیم.
 سپس مقدار dsn را به صورت زیر تغییر میدهیم.
 <div dir="ltr">
