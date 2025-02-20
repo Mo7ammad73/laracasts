@@ -85,3 +85,50 @@ $this->connection  = new PDO($dsn,"root","",[
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC//تعیین مقدار پیش فرض واکشی داده ها اط پایگاه داده به صورت آرایه انجمنی
     ]);
 ```
+<div dir="rtl">
+
+# http_biuld_query()
+این تابع یک آرایه را به یک رشته کویری تبدیل میکند که میتوان آنها را در url یا درخواست http  استفاده کرد.
+<div dir="ltr">
+
+```php
+<?php
+    $data = [
+        'name' => 'Ali',
+        'age' => 30,
+        'city' => 'Tehran'
+    ];
+    
+    $queryString = http_build_query($data);
+    
+    echo $queryString;
+    //name=Ali&age=30&city=Tehran
+    //این رشته‌ی کوئری می‌تواند برای ارسال اطلاعات در یک URL یا درخواست‌های API استفاده شود:
+    //https://example.com/profile.php?name=Ali&age=30&city=Tehran
+
+
+$data = [
+    'user' => [
+        'name' => 'Ali',
+        'age' => 30
+    ],
+    'city' => 'Tehran'
+];
+
+$queryString = http_build_query($data);
+
+echo $queryString;
+
+
+//user%5Bname%5D=Ali&user%5Bage%5D=30&city=Tehran
+
+//در اینجا، PHP کلیدهای آرایه را به فرمت URL-Encoded (%5B و %5D معادل [ ] در URL هستند) تبدیل کرده است.
+
+http_build_query($data, '', '&', PHP_QUERY_RFC3986);
+
+//پارامتر دوم: Prefix (معمولاً خالی '' است)
+//پارامتر سوم: جداکننده بین پارامترها (& یا ;)
+//پارامتر چهارم: RFC3986 یا RFC1738 برای نوع URL Encoding
+?>
+
+```
