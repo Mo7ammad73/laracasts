@@ -132,3 +132,69 @@ http_build_query($data, '', '&', PHP_QUERY_RFC3986);
 ?>
 
 ```
+<div dir="rtl">
+ با توجه به تابع http biuld query آرایه config  را به این تابع داده تا رشته مورد نظرمان را بگیریم فقط کاراکتر جداکننده را سمی کالن میگذاریم چون در dsn با سمی کالن جدا میشوند.
+<div dir="ltr">
+
+```php
+$dsn = "mysql:" . http_build_query($config,'',';');
+```
+<div dir="rtl">
+برای داینامیک کردن کار بهتر است آرایه config را در فایل index تعریف کرده و به کلاس database به عنوان آرگومان بدهیم پس:
+<div dir="ltr">
+
+```php
+//construc method in class dtabase:
+ public function __construct($config) {
+        
+    $dsn = "mysql:" . http_build_query($config,'',';');
+    $this->connection  = new PDO($dsn,"root","",[
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]);
+    }
+
+//file index.php
+
+require_once "database.php";
+$config = [
+    "host" => "localhost",
+    "port" => 3306,
+    "dbname" => "mydb1",
+    "username" => "root",
+    "charset" => "utf8mb4"
+];
+$db = new Database($config);
+$post = $db->query("SELECT * FROM tb2")->fetchAll(PDO::FETCH_ASSOC);;
+show_print($post);
+
+foreach ($post as $key => $value){
+    echo $value['title']."<br>";
+}
+```
+<div dir="rtl">
+یک فایل تنظیمات config.php ایجاد کرده و درون آن کد زیر را مینویسیم:
+<div dir="ltr">
+
+```php
+<?php
+    return [
+    "host" => "localhost",
+    "port" => 3306,
+    "dbname" => "mydb1",
+    "username" => "root",
+    "charset" => "utf8mb4"
+    ];
+
+//index.php 
+
+
+require_once "database.php";
+$config = require_once "config.php";//notic
+$db = new Database($config);
+$post = $db->query("SELECT * FROM tb2")->fetchAll(PDO::FETCH_ASSOC);;
+show_print($post);
+
+foreach ($post as $key => $value){
+    echo $value['title']."<br>";
+}
+```
