@@ -25,8 +25,8 @@ public function query($query,$params = [])
 ```
 ### index.php
 ```php
-isset($_GET['id'])? $id = $_GET['id'] : $id = 0;
 
+$id = $_GET['id'] ?? 0;// اگر مقدار نداشت مقدارش را صفر در نظر بگیر
 $q ="select * from tb2 where id=:id ";
 
 echo $q;
