@@ -35,3 +35,16 @@ $post = $db->query($q,['id'=> $id])->fetchAll();
 //for example url=example.com?id=3 
 show_print($post);
 ```
+<div dir="rtl">
+
+**نکته:** وقتی به کد sql میخواهیم بفهمونیم که از متغیر بایند شده استفاده میکنیم از :نام متغیر بایند شده یا ؟ استفاده میکنیم به صورت زیر:
+فقط وقتی از ؟ استفاده میکنیم دیگه نیاز نیست نامش رو هم به متد execute  بفرستیم.
+<div dir="ltr">
+
+```php
+$q ="select * from tb2 where id=:id ";
+$post = $db->query($q,['id'=> $id])->fetchAll();//هم مقدار هم نام رو میفرسته
+$query = "SELECT * FROM users WHERE age > ? AND city = ?";
+$users = $db->query($query, [25, 'Tehran'])->fetchAll();//فقط مقدار رو میفرسته
+
+```
