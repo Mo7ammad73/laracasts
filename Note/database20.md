@@ -16,7 +16,7 @@ echo $q;
 
 ### database.php
 ```php
-public function query($query,$params = [])
+public function query($query,$params = [])//آرگومان دوم یک آرایه از متغیرهای بایندشده هست که با : یا ؟ بهش میفرستن  و اون مقدار رو به پایگاه داده جدا از کوئری میفرسته
  {
      $statement = $this->connection->prepare($query);
      $statement->execute($params);
@@ -42,8 +42,16 @@ show_print($post);
 <div dir="ltr">
 
 ```php
+$query = "SELECT * FROM users WHERE age > :age AND city = :city";
+$params = ['age' => 25, 'city' => 'Tehran'];
+$users = $db->query($query, $params)->fetchAll();
+
 $q ="select * from tb2 where id=:id ";
 $post = $db->query($q,['id'=> $id])->fetchAll();//هم مقدار هم نام رو میفرسته
+
+
+
+
 $query = "SELECT * FROM users WHERE age > ? AND city = ?";
 $users = $db->query($query, [25, 'Tehran'])->fetchAll();//فقط مقدار رو میفرسته
 
