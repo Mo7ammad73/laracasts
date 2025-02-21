@@ -198,3 +198,39 @@ foreach ($post as $key => $value){
     echo $value['title']."<br>";
 }
 ```
+<div dir="rtl">
+متد سازنده در فایل database را تغییر داده و آرگومان نام کاربری و پسوورد را به آن اضافه میکنیم سپس وقتی یک شی PDO ایجاد کردیم از آرگومان های متدسازنده در آن استفاده می کنیم.
+<div dir="ltr">
+
+```php
+public function __construct($config,$username='root',$password='') {
+
+    $dsn = "mysql:" . http_build_query($config,'',';');
+    $this->connection  = new PDO($dsn,$username,$password,[
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]);
+```
+<div dir="rtl">
+به فایل config.php  رفته  محتوایش را تغییر میدهیم
+
+<div dir="ltr">
+
+```php
+<?php
+    return [
+        "database"=> [
+            "host" => "localhost",
+            "port" => 3306,
+            "dbname" => "mydb1",
+            "username" => "root",
+            "charset" => "utf8mb4"
+        ]
+    ];
+```
+<div dir="rtl">
+حالا در هنگام ایجاد کلاس Database به صورت زیر عمل میکنیم
+<div dir="ltr">
+
+```php
+$db = new Database($config['databases']);//add key database to $config
+```
